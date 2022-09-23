@@ -1,20 +1,20 @@
-bits 32
+bits 32 ;32-bit regime
 
 section .text
-	align 4
-    dd 0x1BADB002
-    dd 0x00
-    dd - (0x1BADB002 + 0x00)
+    align 4
+    dd 0x1BADB002 ;magic
+    dd 0x00 ;flags
+    dd - (0x1BADB002 + 0x00) ;checksum
 
-global start
-extern kernelmain
+global start ;start
+extern kernelmain ;c-function
 
 start:
-	cli
-	mov esp, stack_space
-	call kernelmain
-	hlt
+	cli ;blocks interrupts
+	mov esp, stack_space ;stack space
+	call kernelmain ;calling kernel
+	hlt ;halt proc
 
 section .bss
-resb 16384
+resb 16384 ;stack
 stack_space:
