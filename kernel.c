@@ -9,7 +9,7 @@ void kernelmain(void) {
 
 	while (j < screensize) {
 		vidptr[j] = bg; //console clear
-		vidptr[j+1] = 0x99; //blue background
+		vidptr[j+1] = 0x88; //grey background
 		j = j + 2;
 	}
 
@@ -17,7 +17,7 @@ void kernelmain(void) {
 
 	while (osname[j] != '\0') {
 		vidptr[i] = osname[j]; //writing os name
-		vidptr[i + 1] = 0x9E; //yellow text color
+		vidptr[i + 1] = 0x8F; //white text color
 		++j;
 		i = i + 2;
 	}
@@ -27,7 +27,7 @@ void kernelmain(void) {
 
 	while (welcomemessage[j] != '\0') {
 		vidptr[i] = welcomemessage[j]; //writing welcome
-		vidptr[i + 1] = 0x9E; //yellow text color
+		vidptr[i + 1] = 0x8F; //white text color
 		++j;
 		i = i + 2;
 	}
