@@ -1,5 +1,5 @@
 void kernelmain(void) {
-	char *vidmemptr = (char*)0xb8000; //video memory pointer
+	char *vidptr = (char*)0xb8000; //video memory pointer
 	char bg = ' '; //background
 	const char *osname = "SomeOS"; //name
 	const char *welcomemessage = "Press any key to continue..."; //message
