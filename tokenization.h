@@ -6,6 +6,7 @@
 
 using namespace std;
 
+// token types
 enum TokenType {
     int_t,
     string_t,
@@ -24,11 +25,13 @@ enum TokenType {
     semicolon
 };
 
+// token itself
 struct Token {
     TokenType type;
     optional<string> value;
 };
 
+// lexin func
 vector<Token> tokenize(string code) {
     string buffer;
     vector<Token> tokens;

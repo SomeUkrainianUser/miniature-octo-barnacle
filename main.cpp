@@ -9,12 +9,14 @@
 using namespace std;
 
 int main(int argc, char* argv[]) {
+    // check if compiler has right args
     if (argc != 2) {
         cerr << "Error: wrong usage. Use:" << endl;
         cerr << "br <input.br>" << endl;
         return EXIT_FAILURE;
     }
 
+    // readin src code
     string contents;
     {
         stringstream contents_stream;
@@ -23,6 +25,7 @@ int main(int argc, char* argv[]) {
         contents = contents_stream.str();
     }
 
+    // lexer lexin src code
     vector<Token> tokens = tokenize(contents);
 
     return 0;
