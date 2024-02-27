@@ -1,0 +1,16 @@
+.vscode
+*.br
+*~
+*.exe
+*.dll
+*.so
+*.dylib
+*.o
+*.obj
+*.swp
+*.swo
+.idea/
+.vscode/
+*.log
+.env
+*.tmp
