@@ -14,7 +14,6 @@ namespace SyntaxTree {
 
     struct Tree {
         TreeNode* top;
-        vector<TreeNode*> leaves;
         int nodesCount = 0;
     };
 
@@ -29,8 +28,6 @@ namespace SyntaxTree {
             tmp->parentNode = parent;
             tmp->contents = data;
             parent->childrenNodes.push_back(tmp);
-            tree->leaves.erase(parent);
-            tree->leaves.push_back();
             delete tmp;
             return parent->childrenNodes.at(parent->childrenNodes.size() - 1);
         }
