@@ -1,3 +1,3 @@
 # Br compiler
 
-this repository is created to display my compiler i'm making rn for fun
+This is a repository for Br language compiler. This file fill contain guide on language in future
