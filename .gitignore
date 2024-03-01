@@ -12,3 +12,6 @@
 *.log
 .env
 *.tmp
+main
+run.sh
+input.br

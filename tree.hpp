@@ -3,13 +3,15 @@
 #include <optional>
 #include <string>
 
+#include "tokenization.hpp"
+
 using namespace std;
 
-namespace SyntaxTree {
-    struct TreeNode{
+namespace Trees {
+    struct TreeNode {
         TreeNode* parentNode;
         vector<TreeNode*> childrenNodes;
-        string contents;
+        Token contents;
     };
 
     struct Tree {
@@ -17,7 +19,7 @@ namespace SyntaxTree {
         int nodesCount = 0;
     };
 
-    TreeNode* insert(TreeNode* parent, string data, Tree* tree) {
+    TreeNode* insert(TreeNode* parent, Token data, Tree* tree) {
         if (parent == nullptr) {
             tree->top = new TreeNode;
             tree->top->parentNode = nullptr;

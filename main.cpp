@@ -8,7 +8,6 @@
 #include "tree.hpp"
 
 using namespace std;
-using namespace SyntaxTree;
 
 int main(int argc, char* argv[]) {
     // check if compiler has right args
@@ -31,8 +30,10 @@ int main(int argc, char* argv[]) {
     vector<Token> tokens = tokenize(contents);
 
     for (int i = 0; i < tokens.size(); i++) {
-        cout << tokens[i].value << endl;
+        cout << tokens[i].value << " ";
     }
+
+    cout << endl;
 
     return 0;
 }
