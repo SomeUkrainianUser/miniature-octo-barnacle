@@ -1,1 +1,4 @@
-(
+int a assign: 32
+
+if (a > 5) and (a < 100):
+	return a * a + a;
